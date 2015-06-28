@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/query_top_bar" />
+
+    <LinearLayout
+        android:id="@+id/query_result_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tips"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:orientation="vertical"
+        android:paddingTop="2dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/sale_query_start_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:onClick="pickDate" >
+
+                <TextView
+                    android:id="@+id/sale_query_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="TextView"
+                    android:textColor="#ed4135"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ImageView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/sale_query_start"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/sale_query_start"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/data_picker" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sale_query_end_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="pickDate" >
+
+                <TextView
+                    android:id="@+id/sale_query_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="TextView"
+                    android:textColor="#ed4135"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/sale_query_end"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/data_picker" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/query_phone"
+        style="@style/edittext_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:ems="13"
+        android:hint="@string/net_user_phone"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/text_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/query_phone"
+        android:layout_alignRight="@+id/query_phone"
+        android:layout_below="@+id/query_phone"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-20dp"
+        android:text="@string/query_chose_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/sale_query_submit"
+        style="@style/button_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="gotoQueryResult"
+        android:text="@string/submit" />
+
+    <LinearLayout
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sale_query_submit"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/query_tips"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

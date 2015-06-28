@@ -1,0 +1,275 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/top_bar" />
+
+    <TextView
+        android:id="@+id/balance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/include1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/card_recharge"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/query_result_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/card_recharge_submit"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="2dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout03"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/card_value1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/recharge_moneny_bg_1"
+                android:onClick="onClickMoneny"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/num10000"
+                android:textColor="#ff0000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/card_value2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/recharge_moneny_bg_1"
+                android:onClick="onClickMoneny"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/num25000"
+                android:textColor="#ff0000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/card_value3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/recharge_moneny_bg_1"
+                android:onClick="onClickMoneny"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/num50000"
+                android:textColor="#ff0000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/card_value4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/recharge_moneny_bg_1"
+                android:onClick="onClickMoneny"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/num100000"
+                android:textColor="#ff0000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/card_value5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/recharge_moneny_bg_1"
+                android:onClick="onClickMoneny"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/num200000"
+                android:textColor="#ff0000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/card_recharge_phone"
+        style="@style/edittext_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:ems="13"
+        android:hint="@string/net_user_phone"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/text_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/card_query_num"
+        android:layout_below="@+id/TextView01"
+        android:text="@string/card_recharge_tx2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/card_tips"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/card_recharge_submit"
+        style="@style/button_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClickRecharge"
+        android:text="@string/card_recharge_immediately" />
+
+    <TextView
+        android:id="@+id/card_query_num"
+        style="@style/text_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_recharge_phone"
+        android:layout_toLeftOf="@+id/card_recharge_phone"
+        android:text="@string/card_recharge_tx1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/card_query_num"
+        android:layout_toRightOf="@+id/card_query_num" >
+    </RelativeLayout>
+    
+        <Spinner
+        android:id="@+id/card_recharge_spinner"
+        style="@style/text_style_1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignLeft="@+id/card_recharge_phone"
+        android:layout_alignTop="@+id/TextView01"
+        android:background="@drawable/edit_text_bg"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        style="@style/text_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/card_query_num"
+        android:text="000000000000000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/card_recharge_spinner"
+        android:layout_alignRight="@+id/card_recharge_spinner"
+        android:layout_alignTop="@+id/card_recharge_spinner"
+        android:scaleType="fitXY"
+        android:src="@drawable/data_picker" />
+    
+
+    <include
+        android:id="@+id/card_recharge_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/card_recharge_confirm"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/card_recharge_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/card_recharge_success"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/card_recharge_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/card_recharge_failed"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

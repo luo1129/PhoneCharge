@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <EditText
+        android:id="@+id/forget_account"
+        style="@style/edittext_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageView01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="@string/forget_account" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/forget_next"
+        style="@style/button_style_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="onClick"
+        android:text="@string/next" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/net_confirm_tx2"
+        android:layout_alignTop="@+id/net_confirm_tx2"
+        android:layout_toLeftOf="@+id/net_confirm_tx2"
+        android:scaleType="fitEnd"
+        android:src="@drawable/login_forget" />
+
+    <TextView
+        android:id="@+id/net_confirm_tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/forget_forget"
+        android:textColor="#665d58"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/forget_account"
+        android:layout_alignRight="@+id/forget_account"
+        android:layout_below="@+id/forget_account"
+        android:layout_marginTop="20dp" >
+
+        <EditText
+            android:id="@+id/forget_code_et"
+            style="@style/edittext_style_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="@string/forget_code_hint"
+            android:maxLength="4" />
+
+        <Button
+            android:id="@+id/forget_code"
+            style="@style/button_style_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/forget_code_et"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/forget_code_et"
+            android:onClick="clickGetCode"
+            android:text="@string/forget_code"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

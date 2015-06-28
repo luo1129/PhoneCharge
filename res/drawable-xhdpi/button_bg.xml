@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <bitmap android:src="@drawable/login_button" >
+<!--             <padding -->
+<!--                 android:bottom="5dp" -->
+<!--                 android:left="5dp" -->
+<!--                 android:right="5dp" -->
+<!--                 android:top="5dp" /> -->
+        </bitmap>
+    </item>
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#44000000" />
+
+            <corners android:radius="5dip" />
+
+<!--             <padding -->
+<!--                 android:bottom="5dp" -->
+<!--                 android:left="5dp" -->
+<!--                 android:right="5dp" -->
+<!--                 android:top="5dp" /> -->
+        </shape>
+    </item>
+
+</layer-list>
